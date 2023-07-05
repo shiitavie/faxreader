@@ -1,0 +1,81 @@
+LAB REQUISITION
+Comments : Gopath Test eing ordered:
+
+ProstateNow Hereditary Prostate cancer Extended Panel
+oo —-SDECiMEN INFOIMATION~==mmmmm e mmmmm e
+source:  Blood
+order #: 1217256
+Lincolnwood
+6810 N McCormick Blvd
+Lincolnwood IL 60712-2709
+
+stasinos,Pmed46 (540001070)
+DOB: 01/18/1988 F SSN: xxx-xx-9999
+Home 847-555-5555
+cell 847-885-2124
+Email Address :pmedd6stasinos@gmail.com
+order date:6/28/2023
+ordering User:TLBANI, NADIM [5061
+Encounter provider:Tibawi, Nadim if., wD [5061]
+Authorizing provider: Tibawi, Nadim'M., WD (5061]
+Department:FM LINCOLNWOOD[15701]
+order specific Information
+Test: REF - COMPREHENSIVE PROSTATE GERMLINE GENETIC TEST [Custom: LAB99023]
+order #: 1217256Qty: 1 FUTURE
+priority: Routine
+Specimen Source: Blood
+Resulting Agency: GOPATH
+Future order Information
+Expires on:06/27/2024 Expected by:06/28/2023  (Approximat®
+Comment :GoPath Test Being Ordered:
+ProstateNow Hereditary Prostate Cancer Extended Panel
+Associated piagnoses
+715.03 prostate cancer genetic susceptibility
+Resulting Agency? -> Gopath
+what is the patient's ethnicity? -> Canary Islands
+-> caucasian
+Has the patient been consented? -> Yes
+DO you want pre-test genetic counseling? -> Yes
+Do you want post-test genetic counseling? -> Yes
+payor: AMBETTER
+
+OCR Result: LAB REQUISITION
+Comments : Gopath Test eing ordered:
+
+ProstateNow Hereditary Prostate cancer Extended Panel
+oo —-SDECiMEN INFOIMATION~==mmmmm e mmmmm e
+source:  Blood
+order #: 1217256
+Lincolnwood
+6810 N McCormick Blvd
+Lincolnwood IL 60712-2709
+
+stasinos,Pmed46 (540001070)
+DOB: 01/18/1988 F SSN: xxx-xx-9999
+Home 847-555-5555
+cell 847-885-2124
+Email Address :pmedd6stasinos@gmail.com
+order pate:6/28/2023
+ordering User:TLBANI, NADIM [5061
+Encounter provider:Tibawi, Nadim if., wD [5061]
+Authorizing provider: Tibawi, Nadim'M., WD (5061]
+Department:FM LINCOLNWOOD[15701]
+order specific Information
+Test: REF - COMPREHENSIVE PROSTATE GERMLINE GENETIC TEST [Custom: LAB99023]
+order #: 1217256Qty: 1 FUTURE
+priority: Routine
+Specimen Source: Blood
+Resulting Agency: GOPATH
+Future order Information
+Expires on:06/27/2024 Expected by:06/28/2023  (Approximat®
+Comment :GoPath Test Being Ordered:
+ProstateNow Hereditary Prostate Cancer Extended Panel
+Associated piagnoses
+715.03 prostate cancer genetic susceptibility
+Resulting Agency? -> Gopath
+what is the patient's ethnicity? -> Canary Islands
+-> caucasian
+Has the patient been consented? -> Yes
+DO you want pre-test genetic counseling? -> Yes
+Do you want post-test genetic counseling? -> Yes
+payor: AMBETTER
