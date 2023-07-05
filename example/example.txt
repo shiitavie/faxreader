@@ -38,44 +38,62 @@ Has the patient been consented? -> Yes
 DO you want pre-test genetic counseling? -> Yes
 Do you want post-test genetic counseling? -> Yes
 payor: AMBETTER
+Payor Address: PO BOX 3060
+FARMINGTON MO 63640-0000
 
-OCR Result: LAB REQUISITION
-Comments : Gopath Test eing ordered:
+Payor Phone: 855-745-5507
+Plan: AMBETTER
+sponsor Code: Not Available
+Subscriber ID 39898765555
+Subscriber Name:  STASINOS, PMED46
+Subscriber SSN: 999-99-9999
 
-ProstateNow Hereditary Prostate cancer Extended Panel
-oo —-SDECiMEN INFOIMATION~==mmmmm e mmmmm e
-source:  Blood
-order #: 1217256
-Lincolnwood
+Subscriber Address: 1234 Amb Lane
+skokie, IL 60076
+
+Effective From: 11/06/14
+Effective To:
+
+Group Number
+
+Group Name
+
+Ordering Physician: 1811010036 NADIM IL@AWI
+
+PMED
+Not Available
+
+Encounter Number: 324025434
+
+LINCOLNWOOD
 6810 N McCormick Blvd
 Lincolnwood IL 60712-2709
 
-stasinos,Pmed46 (540001070)
-DOB: 01/18/1988 F SSN: xxx-xx-9999
-Home 847-555-5555
-cell 847-885-2124
-Email Address :pmedd6stasinos@gmail.com
-order pate:6/28/2023
-ordering User:TLBANI, NADIM [5061
-Encounter provider:Tibawi, Nadim if., wD [5061]
-Authorizing provider: Tibawi, Nadim'M., WD (5061]
-Department:FM LINCOLNWOOD[15701]
-order specific Information
-Test: REF - COMPREHENSIVE PROSTATE GERMLINE GENETIC TEST [Custom: LAB99023]
-order #: 1217256Qty: 1 FUTURE
-priority: Routine
-Specimen Source: Blood
-Resulting Agency: GOPATH
-Future order Information
-Expires on:06/27/2024 Expected by:06/28/2023  (Approximat®
-Comment :GoPath Test Being Ordered:
-ProstateNow Hereditary Prostate Cancer Extended Panel
-Associated piagnoses
-715.03 prostate cancer genetic susceptibility
-Resulting Agency? -> Gopath
-what is the patient's ethnicity? -> Canary Islands
--> caucasian
-Has the patient been consented? -> Yes
-DO you want pre-test genetic counseling? -> Yes
-Do you want post-test genetic counseling? -> Yes
-payor: AMBETTER
+847-674-6900
+
+Primary Coverage
+
+Payer: ANBETTER
+
+Plan: AMBETTER
+
+sponsor Code:
+
+Subscriber ID: 39898765555
+
+Subscriber Name:  STASINOS, PMED46
+
+Subscriber SSN: 2XX-XX-9999
+
+Subscriber Address: 1234 Amb Lane
+skokie, TL 60076
+
+Effective Fror 11/6/2014
+Effective To
+Group Number PMED
+
+Group Name:
+
+Diagnosis Information
+Icb code Descripk¥ on |
+Z15.03 Prostate Cancer Genetic Susceptibility (P
