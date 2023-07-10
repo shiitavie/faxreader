@@ -1,2 +1,2 @@
-identifier,num_samples,sample_1_identifier,sample_1_group_name,sample_1_state_position,sample_1_container_type,sample_1_container_barcode,test_panel_code,patient_date_of_birth,patient_sex,patient_first_name,patient_last_name,patient_phone_number,patient_email,sample_collection_date,license_registry,provider_npi
-NS-0000,1,NS-0000,Sendout,A01,Tube,0000,LGRA,1/18/1988 12:00:00 AM,F,stasinos,Pmed46,847-885-2124,pmedd6stasinos@gmail.com,6/28/2023 12:00:00 AM,NPI,1811010036
+identifier,num_samples,sample_1_identifier,sample_1_group_name,sample_1_state_position,sample_1_container_type,sample_1_container_barcode,test_panel_code,sample_collection_date,sample_1_date_received,patient_date_of_birth,patient_sex,patient_first_name,patient_last_name,patient_phone_number,patient_email
+NS-0000,1,NS-0000,Sendout,A01,Tube,0000,LGRA,2023-07-10T19:19:23.556Z,,1988-01-18T00:00:00.000Z,F,stasinos,Pmed46,847-885-2124,pmedd6stasinos@gmail.com
