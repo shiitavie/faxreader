@@ -6,7 +6,7 @@ const FILEPATH = "./example/SampleOrderPage1.png"
 const TEXT = fs.readFileSync('./example/example.txt', 'utf-8');
 
 // desired data structure for orders 
-class Order {
+interface OrderData {
     identifier: string; //required field
     num_samples: number; //required field (default 1)
     sample_1_identifier: string; //required field
@@ -39,24 +39,45 @@ class Order {
     patient_race?: string;
     patient_email?: string;
     provider_name?: string;
+}
 
+class Order {
+    dataFields: OrderData
+    
     constructor(barcode: string) {
         const identifier: string = "NS-" + barcode
-        // required:
-        this.identifier = identifier;
-        this.num_samples = 1;
-        this.sample_1_identifier = identifier;
-        this.sample_1_group_name = "Sendout";
-        this.sample_1_state_position = "A01";
-        this.sample_1_container_type = "Tube";
+        let newOrderData: OrderData = {
+            // required:
+            identifier: identifier,
+            num_samples : 1,
+            sample_1_identifier : identifier,
+            sample_1_group_name : "Sendout",
+            sample_1_state_position : "A01",
+            sample_1_container_type : "Tube",
+            // optional:
+            sample_1_container_barcode : barcode,
+            test_panel_code :"LGRA",
+        };
 
-        // optional:
-        this.sample_1_container_barcode = barcode
-        this.test_panel_code ="LGRA"
+        this.dataFields = newOrderData
     }
 
-    convertToCSV() {
-        // todo
+    headerToCsv(): string {
+        const separator = ',';
+        const keys = Object.keys(this.dataFields);
+        const header = keys.join(separator) + '\n'
+        return header
+    }
+
+    dataToCsv(): string {
+        const keys = Object.keys(this.dataFields);
+        return keys.map(k  => {
+            let cell: any = this.dataFields[k as keyof OrderData] 
+            let cellString: string = cell instanceof Date 
+                ? cell.toLocaleString().replace(', ', ' ')
+                : cell.toString()
+            return cellString;
+        }).join(",") + '\n'
     }
 }
 
@@ -81,25 +102,25 @@ function parser(rawText: string): Order {
     lines.forEach((line, index) => {
         // extract order date ( = collection date??)
         if (line.includes("order date")) {
-            let sample_collection_date: Date = new Date(line.split(":")[1])
-            output.sample_collection_date = sample_collection_date
+            let sample_collection_date: Date = new Date(Date.parse(line.split(":")[1]))
+            output.dataFields["sample_collection_date"] = sample_collection_date
 
         // extract pt bio info (DOB, gender, name)
         } else if (line.includes("DOB")) {
-            let patient_date_of_birth: Date = new Date(line.split(":")[1].trim().split(" ")[0])
-            output.patient_date_of_birth = patient_date_of_birth
-            output.patient_sex = line.split(":")[1].trim().split(" ")[1]
+            let patient_date_of_birth: Date = new Date(Date.parse(line.split(":")[1].trim().split(" ")[0]))
+            output.dataFields["patient_date_of_birth"] = patient_date_of_birth
+            output.dataFields["patient_sex"] = line.split(":")[1].trim().split(" ")[1]
             let name: string = lines[index - 1].split("(")[0]
-            output.patient_first_name = name.split(",")[0].trim()
-            output.patient_last_name = name.split(",")[1].trim()
+            output.dataFields["patient_first_name"] = name.split(",")[0].trim()
+            output.dataFields["patient_last_name"] = name.split(",")[1].trim()
 
         // extract pt cell phone number (collecting cell instead of home) 
         } else if (line.includes("cell")) {
-            output.patient_phone_number = line.split(" ")[1].trim()
+            output.dataFields["patient_phone_number"] = line.split(" ")[1].trim()
 
         // extract pt email address
         } else if (line.includes("mail")) {
-            output.patient_email = line.split(":")[1].trim()
+            output.dataFields["patient_email"] = line.split(":")[1].trim()
         
         } else if (line.includes("ethnicity")){
             //TBD
@@ -107,12 +128,26 @@ function parser(rawText: string): Order {
         } else if (line.toLowerCase().includes("physician")) {
             let matches = line.match(/\b\d{10}\b/)
             if (matches) {
-                output.license_registry = "NPI"
-                output.provider_npi = matches[0]
+                output.dataFields["license_registry"] = "NPI"
+                output.dataFields["provider_npi"] = matches[0]
             }
         }
     });
     return output;
 }
 
-console.log(parser(TEXT))
+function convertToCsv(orders: Order[]) {
+    if (orders.length < 1){
+        return;
+    } 
+    let content = orders[0].headerToCsv()
+    content += orders.map(order => order.dataToCsv()).join()
+    fs.writeFile('upload_orders.csv', content, function (err) {
+        if (err) throw err;
+        console.log('Saved!');
+    });
+}
+
+
+const parsed = parser(TEXT)
+convertToCsv([parsed])
